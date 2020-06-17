@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import App from "./components/app";
+import store from "./redux/store";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+function render(){
+    ReactDOM.render(<App store={store}/>, document.getElementById('root'));
+}
+
+render(); // 初始化渲染
+
+store.subscribe(render); // 订阅监听，如果 store 中的 state 发生变化则重新渲染页面
