@@ -6,9 +6,9 @@
 .pnp.js
 
 # IDE
-.idea
-.vscode
-.history
+/.idea
+/.vscode
+/.history
 
 # testing
 /coverage

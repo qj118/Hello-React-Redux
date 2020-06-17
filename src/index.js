@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
-import App from "./components/app";
+import App from "./containers/app";
 import store from "./redux/store";
 
-function render(){
-    ReactDOM.render(<App store={store}/>, document.getElementById('root'));
-}
 
-render(); // 初始化渲染
-
-store.subscribe(render); // 订阅监听，如果 store 中的 state 发生变化则重新渲染页面
+ReactDOM.render((
+    <Provider store={store}>
+        <App />
+    </Provider>
+), document.getElementById('root'));
