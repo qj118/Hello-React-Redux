@@ -1,5 +1,9 @@
 /*
- 包含所有 action type 的常量
+    包含所有的 action 的 type 名称常量
  */
-export const INCREMENT = 'INCREMENT';
-export const DECREMENT = 'DECREMENT';
+// 添加评论
+export const ADD_COMMENT = 'add_comment';
+// 删除评论
+export const DELETE_COMMENT = 'delete_comment';
+// 接收后台评论
+export const RECEIVE_COMMENTS = 'RECEIVE_COMMENTS';
