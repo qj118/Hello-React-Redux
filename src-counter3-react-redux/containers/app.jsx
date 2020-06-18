@@ -1,10 +1,10 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {decrement, increment, incrementAsync} from "../redux/actions";
+import {decrement, increment} from "../redux/actions";
 
 import Counter from "../components/counter";
 
 export default connect(
     state => ( {count: state} ),
-    {increment, decrement, incrementAsync}
+    {increment, decrement}
 )(Counter);
